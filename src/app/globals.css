@@ -1,0 +1,66 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --color-ivory: #F7F4EE;
+    --color-charcoal: #201E1A;
+    --color-gold: #B39460;
+    --color-gold-light: #CBB07E;
+    --color-gold-dark: #917544;
+    --color-taupe: #8A8175;
+    --color-espresso: #29231F;
+    --color-softwhite: #FFFEFC;
+    
+    --font-cormorant: "Cormorant Garamond", Garamond, Georgia, serif;
+    --font-inter: "Inter", system-ui, -apple-system, sans-serif;
+    --font-handwriting: "Caveat", "Brush Script MT", cursive;
+  }
+
+  body {
+    background-color: var(--color-ivory);
+    color: var(--color-charcoal);
+    font-family: var(--font-inter);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: var(--font-cormorant);
+  }
+
+  .font-handwriting {
+    font-family: var(--font-handwriting);
+  }
+}
+
+/* Custom luxury scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F4EE;
+}
+::-webkit-scrollbar-thumb {
+  background: #B39460;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #917544;
+}
+
+/* Print styles for A4 Invoice and Thermal KOT */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
