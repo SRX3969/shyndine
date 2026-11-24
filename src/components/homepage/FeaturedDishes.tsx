@@ -63,6 +63,7 @@ export function FeaturedDishes({ dishes }: FeaturedDishesProps) {
                 <Link
                   href={`/menu/${dish.slug}`}
                   className="relative h-60 w-full overflow-hidden block bg-[#201E1A]/10"
+                  style={{ position: "relative", overflow: "hidden", display: "block", width: "100%", height: "240px" }}
                 >
                   <Image
                     src={primaryImage}
